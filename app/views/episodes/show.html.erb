@@ -9,3 +9,18 @@
     <li><%= link_to guest.name, guest %></li>
   <% end %>
 </ul>
+
+
+
+
+<h3>Producers:</h3>
+
+<ul>
+    <% @episode.appearances.each do |appearance| %>
+     <% if appearance.user != nil %>
+            <li><%=  appearance.user.username %></li>
+    <% else %>
+        <li>No producer on file for appearance</li>
+    <% end %>
+    <% end %>
+</ul>

@@ -15,6 +15,7 @@ class AppearancesController < ApplicationController
   end
 
       def edit
+          @user = current_user
           @appearance = Appearance.find(params[:id])
       end
 
